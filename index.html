@@ -5,38 +5,57 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>今天赚了多少</title>
 <style>
-:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;color:#22332e;background:#e5eae5;font-synthesis:none}*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:28px}.app{width:min(1080px,100%);height:min(760px,calc(100vh - 56px));min-height:600px;display:grid;grid-template-columns:310px 1fr;background:#f6f7f4;border:1px solid #d5ded7;border-radius:22px;overflow:hidden;box-shadow:0 20px 70px #263b3022}.settings{background:#fdfefb;padding:30px 27px;overflow:auto;border-right:1px solid #e3e9e3}.brand{display:flex;align-items:center;gap:11px;margin-bottom:28px}.brand-icon,.avatar{display:grid;place-items:center;flex:none;background:#79c89d;color:#fff;font-size:20px;font-weight:800;border-radius:13px;width:42px;height:42px}.brand strong{font-size:16px}.brand small{display:block;font-size:11px;color:#91a199;margin-top:4px;letter-spacing:.04em}.eyebrow{font-size:11px;letter-spacing:.13em;color:#8aa096;font-weight:700}.settings h1{font-size:23px;letter-spacing:-.04em;margin:8px 0 6px}.sub{color:#86978d;font-size:12px;line-height:1.7;margin:0 0 22px}.field{display:block;margin:0 0 17px}.field>span,.field-label{display:block;font-size:12px;font-weight:700;margin-bottom:8px}.input-wrap{position:relative}.input-wrap b{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:13px;color:#8b9e92;font-weight:500}input{width:100%;height:40px;border:1px solid #dce7de;background:#fbfdfb;border-radius:9px;padding:0 11px;color:#263a30;font:inherit;font-size:13px;outline:none}input:focus{border-color:#69b88e;box-shadow:0 0 0 3px #70bd9420}.input-wrap input{padding-left:27px}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.weekday{display:flex;gap:5px}.weekday button{border:1px solid #e1ebe2;color:#8a9b90;background:#fff;border-radius:8px;height:32px;flex:1;min-width:0;cursor:pointer;font-size:11px}.weekday button.selected{color:#2f8057;background:#e7f5eb;border-color:#bfe3c9;font-weight:700}.hint{font-size:11px;color:#96a79a;line-height:1.55;margin:7px 0 0}.save{width:100%;border:0;border-radius:10px;background:#317e59;color:white;height:43px;font-size:13px;font-weight:700;cursor:pointer;margin-top:2px}.save:hover{background:#286d4c}.error{font-size:12px;color:#bd554c;min-height:18px;margin:7px 0 0}.privacy{font-size:11px;color:#a0afa4;line-height:1.6;margin:15px 0 0}.chat{min-width:0;display:flex;flex-direction:column;background:#f3f6f2}.topbar{height:75px;background:#fbfcfa;border-bottom:1px solid #e1e9e1;display:flex;align-items:center;justify-content:space-between;padding:0 30px}.topbar strong{font-size:15px}.topbar small{display:block;color:#97a79b;margin-top:5px;font-size:11px}.status{font-size:11px;color:#6e9d7d;display:flex;align-items:center;gap:6px}.dot{height:7px;width:7px;border-radius:50%;background:#69bc88;box-shadow:0 0 0 4px #e4f3e8}.conversation{flex:1;overflow:auto;padding:28px 32px}.date{text-align:center;color:#a3afa5;font-size:11px;margin-bottom:25px}.message{display:flex;gap:12px;align-items:flex-start;max-width:570px;margin-bottom:18px}.avatar{width:34px;height:34px;border-radius:10px;font-size:16px}.bubble{background:#fff;border-radius:4px 16px 16px 16px;padding:17px 19px;box-shadow:0 3px 12px #344b3608;line-height:1.65;font-size:13px;min-width:0}.bubble p{margin:0}.bubble p+p{margin-top:5px}.intro{color:#71867a}.intro b{color:#2e493b}.receipt{width:100%;padding:0;overflow:hidden}.receipt-head{padding:19px 20px 15px;border-bottom:1px solid #f0f3ee}.receipt-head .label{color:#81948a;font-size:11px}.receipt-head h2{margin:5px 0 1px;font-size:17px;letter-spacing:-.02em}.receipt-head .detail{color:#97a69a;font-size:11px}.numbers{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#edf2ed}.metric{background:#fff;padding:18px 20px}.metric span{font-size:11px;color:#8b9c90}.metric strong{display:block;font-size:23px;line-height:1.3;margin-top:5px;font-variant-numeric:tabular-nums;letter-spacing:-.04em}.metric strong.green{color:#3e9b68}.metric small{display:block;color:#a2afa4;font-size:10px;margin-top:3px}.receipt-foot{padding:13px 20px;color:#94a297;font-size:11px;line-height:1.6}.notice{padding:10px 12px;border-radius:8px;background:#fff8ea;color:#a27431;margin-top:10px}.prompt{font-size:11px;color:#9eaba0;margin-left:47px}.bottom{border-top:1px solid #e0e9df;background:#fbfcfa;padding:14px 30px 20px}.chips{display:flex;gap:8px;flex-wrap:wrap}.chips button{border:1px solid #dceade;border-radius:20px;padding:7px 13px;font-size:11px;color:#568667;background:#fff;cursor:pointer}.chips button:hover{background:#edf8ef}.bottom p{font-size:10px;color:#acb9ad;margin:10px 0 0}.mobile-settings{display:none}.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
-@media(max-width:700px){body{padding:0;display:block}.app{height:100dvh;min-height:0;border-radius:0;border:0;display:flex;flex-direction:column}.settings{display:none;position:absolute;z-index:3;inset:0;max-height:100dvh;border:0;padding:25px 24px}.settings.open{display:block}.mobile-settings{display:block;border:1px solid #dceade;border-radius:9px;background:white;padding:7px 11px;color:#59866a;font-size:11px;cursor:pointer}.topbar{height:68px;padding:0 20px;flex:none}.chat{flex:1;min-height:0}.conversation{padding:24px 16px}.bottom{padding:12px 18px 18px}.receipt-head{padding:16px}.metric{padding:15px}.metric strong{font-size:20px}.message{gap:9px}.prompt{margin-left:42px}}
+:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;color:#22332e;background:#e5eae5;font-synthesis:none}*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:28px}.app{width:min(620px,100%);background:#f6f7f4;border:1px solid #d5ded7;border-radius:22px;overflow:hidden;box-shadow:0 20px 70px #263b3022}.settings{background:#fdfefb;padding:36px}.brand{display:flex;align-items:center;gap:11px;margin-bottom:28px}.brand-icon,.avatar{display:grid;place-items:center;flex:none;background:#79c89d;color:#fff;font-size:20px;font-weight:800;border-radius:13px;width:42px;height:42px}.brand strong{font-size:16px}.settings h1{font-size:23px;letter-spacing:-.04em;margin:0 0 8px}.sub{color:#5e7367;font-size:12px;line-height:1.7;margin:0 0 22px}.field{display:block;margin:0 0 17px}.field-label{display:block;font-size:13px;font-weight:700;margin-bottom:8px}.input-wrap{position:relative;display:block}.input-wrap b{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:13px;color:#8b9e92;font-weight:500}input{width:100%;height:44px;border:1px solid #dce7de;background:#fbfdfb;border-radius:9px;padding:0 11px;color:#263a30;font:inherit;font-size:13px;outline:none}input:focus{border-color:#69b88e;box-shadow:0 0 0 3px #70bd9420}.input-wrap input{padding-left:27px}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.weekday{display:flex;gap:5px}.weekday button{border:1px solid #e1ebe2;color:#8a9b90;background:#fff;border-radius:8px;height:44px;flex:1;min-width:0;cursor:pointer;font-size:13px}.weekday button.selected{color:#2f8057;background:#e7f5eb;border-color:#bfe3c9;font-weight:700}.hint{font-size:11px;color:#5e7367;line-height:1.55;margin:7px 0 0}.save{width:100%;border:0;border-radius:10px;background:#317e59;color:white;height:44px;font-size:13px;font-weight:700;cursor:pointer;margin-top:2px}.save:hover{background:#286d4c}.error{font-size:12px;color:#bd554c;min-height:18px;margin:7px 0 0}.privacy{font-size:11px;color:#5e7367;line-height:1.6;margin:15px 0 0}.chat{min-width:0;display:flex;flex-direction:column;background:#f3f6f2}.topbar{height:75px;background:#fbfcfa;border-bottom:1px solid #e1e9e1;display:flex;align-items:center;justify-content:space-between;padding:0 30px}.topbar h1{font-size:15px;margin:0}.status{font-size:11px;color:#6e9d7d;display:flex;align-items:center;gap:6px}.dot{height:7px;width:7px;border-radius:50%;background:#69bc88;box-shadow:0 0 0 4px #e4f3e8}.conversation{flex:1;overflow:auto;padding:28px 32px}.date{text-align:center;color:#a3afa5;font-size:11px;margin-bottom:25px}.message{display:flex;gap:12px;align-items:flex-start;max-width:570px;margin-bottom:18px}.avatar{width:34px;height:34px;border-radius:10px;font-size:16px}.bubble{background:#fff;border-radius:4px 16px 16px 16px;padding:17px 19px;box-shadow:0 3px 12px #344b3608;line-height:1.65;font-size:13px;min-width:0}.bubble p{margin:0}.bubble p+p{margin-top:5px}.intro{color:#71867a}.intro b{color:#2e493b}.receipt{width:100%;padding:0;overflow:hidden}.receipt-head{padding:19px 20px 15px;border-bottom:1px solid #f0f3ee}.receipt-head .label{color:#81948a;font-size:11px}.receipt-head h2{margin:5px 0 1px;font-size:17px;letter-spacing:-.02em}.receipt-head .detail{color:#97a69a;font-size:11px}.numbers{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#edf2ed}.metric{background:#fff;min-width:0;padding:18px 20px}.metric span{font-size:11px;color:#8b9c90}.metric strong{display:block;font-size:23px;line-height:1.3;margin-top:5px;overflow-wrap:anywhere;font-variant-numeric:tabular-nums;letter-spacing:-.04em}.metric strong.green{color:#3e9b68}.metric small{display:block;color:#a2afa4;font-size:10px;margin-top:3px}.receipt-foot{padding:13px 20px;color:#94a297;font-size:11px;line-height:1.6}.prompt{font-size:11px;color:#9eaba0;margin-left:47px}.bottom{border-top:1px solid #e0e9df;background:#fbfcfa;padding:14px 30px 20px}.chips{display:flex;gap:8px;flex-wrap:wrap}.chips button{border:1px solid #dceade;border-radius:20px;padding:7px 13px;font-size:11px;color:#568667;background:#fff;cursor:pointer}.chips button:hover{background:#edf8ef}
+[hidden]{display:none!important}
+@media(max-width:700px){
+  body{display:block;padding:0}
+  .app{width:100%;min-height:100vh;min-height:100dvh;border:0;border-radius:0}
+  .settings{padding:28px 24px}
+  input{font-size:16px;min-width:0}
+  .two{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .topbar{height:68px;padding:0 20px}
+  .conversation{padding:24px 16px}
+  .bottom{padding:12px 18px 18px}
+  .receipt-head{padding:16px}
+  .metric{padding:15px}
+  .metric strong{font-size:20px}
+  .message{gap:9px}
+  .prompt{margin-left:42px}
+}
 </style>
 </head>
 <body>
 <main class="app">
   <aside class="settings" id="settings">
-    <div class="brand"><div class="brand-icon">¥</div><div><strong>今天赚了多少</strong><small>YOUR LITTLE PAYDAY</small></div></div>
-    <div class="eyebrow">YOUR WORKDAY</div><h1>设置你的工作日</h1><p class="sub">填写一次，就能随时看看今天的进度。<br>以下是示例数据，可以改成你的情况。</p>
+    <div class="brand"><div class="brand-icon" aria-hidden="true">¥</div><strong>今天赚了多少</strong></div>
+    <h1 id="settingsTitle" tabindex="-1">填写工资和排班</h1><p class="sub">提交后查看今天和本月的工资进度。</p>
     <form id="form" novalidate>
-      <label class="field"><span>月底薪</span><div class="input-wrap"><b>¥</b><input id="salary" type="number" min="0.01" step="0.01" inputmode="decimal" value="10000" required></div></label>
+      <label class="field"><span class="field-label">月底薪</span><span class="input-wrap"><b aria-hidden="true">¥</b><input id="salary" type="number" min="0.01" step="0.01" inputmode="decimal" placeholder="输入每月底薪" required></span></label>
       <div class="field"><span class="field-label">每周哪几天上班</span><div class="weekday" id="weekdays" aria-label="选择每周工作日"></div><p class="hint">可选择双休、单休或自定义工作日。</p><p class="hint" id="monthDays" aria-live="polite"></p></div>
-      <div class="two"><label class="field"><span>上班时间</span><input type="time" id="start" value="09:00" required></label><label class="field"><span>下班时间</span><input type="time" id="end" value="18:00" required></label></div>
-      <button class="save" type="submit">保存并查看</button><p class="error" id="error" role="alert"></p>
+      <div class="two"><label class="field"><span class="field-label">上班时间</span><input type="time" id="start" value="09:00" required></label><label class="field"><span class="field-label">下班时间</span><input type="time" id="end" value="18:00" required></label></div>
+      <button class="save" type="submit">提交并查看</button><p class="error" id="error" role="alert" hidden></p>
     </form>
-    <p class="privacy">设置仅保存在当前设备和浏览器中。<br>这是体验原型，不会发送到微信或服务器。</p>
+    <p class="privacy">工资和排班仅保存在当前浏览器。</p>
   </aside>
-  <section class="chat" aria-label="聊天原型">
-    <header class="topbar"><div><strong>今天赚了多少</strong><small>你的上班进度小搭子</small></div><div class="status"><i class="dot"></i>实时更新</div><button class="mobile-settings" type="button" id="openSettings">修改设置</button></header>
-    <div class="conversation" id="conversation" aria-live="polite">
+  <section class="chat" id="results" aria-labelledby="resultsTitle" hidden>
+    <header class="topbar"><h1 id="resultsTitle" tabindex="-1">工资进度</h1><div class="status"><i class="dot"></i>实时更新</div></header>
+    <div class="conversation">
       <div class="date" id="date"></div>
       <div class="message"><div class="avatar">¥</div><div class="bubble intro"><p><b>嗨，今天也辛苦啦 ☕</b></p><p>让我帮你看看，今天和这个月的工资进度。</p></div></div>
       <div class="message"><div class="avatar">¥</div><div class="bubble receipt"><div class="receipt-head"><div class="label">YOUR PAYDAY REPORT</div><h2 id="greeting">今天的工资进度</h2><div class="detail" id="clock"></div></div><div class="numbers"><div class="metric"><span>今天预计已赚</span><strong class="green" id="todayEarned">—</strong><small>按今日上班时间估算</small></div><div class="metric"><span>今天还剩</span><strong id="todayLeft">—</strong><small>今日预计工资的剩余部分</small></div><div class="metric"><span>本月预计已赚</span><strong class="green" id="monthEarned">—</strong><small>已过去工作日 + 今日进度</small></div><div class="metric"><span>本月还剩</span><strong id="monthLeft">—</strong><small>距离月底薪的剩余部分</small></div></div><div class="receipt-foot"><div id="basis"></div><div>预估工资进度，不代表实际到账金额；不扣午休、税费，不含节假日调休及实际考勤。</div></div></div></div>
       <div class="prompt">金额随本地时间变化，每秒更新一次</div>
     </div>
-    <div class="bottom"><div class="chips"><button type="button" id="refresh">↻ 再看看</button><button type="button" id="edit">✎ 修改我的设置</button></div><p>聊天交互体验原型 · 还未接入微信</p></div>
+    <div class="bottom"><div class="chips"><button type="button" id="refresh">↻ 再看看</button><button type="button" id="edit">修改设置</button></div></div>
   </section>
 </main>
 <script>
 (function(){
   const $ = id => document.getElementById(id);
   const names=['日','一','二','三','四','五','六'];
+  const storageKey = 'littlePaydayConfig';
+  const settings = $('settings');
+  const results = $('results');
+  const error = $('error');
   let selected=new Set([1,2,3,4,5]);
   let config;
   function drawDays(){
@@ -44,18 +63,24 @@
     updateMonthDays(new Date());
   }
   function countDays(now,weekdays){let count=0;const year=now.getFullYear(),month=now.getMonth(),length=new Date(year,month+1,0).getDate();for(let date=1;date<=length;date++)if(weekdays.includes(new Date(year,month,date).getDay()))count++;return count}
-  function updateMonthDays(now){$('monthDays').textContent=`${now.getMonth()+1} 月预计上班 ${countDays(now,[...selected])} 天，按所选工作日自动计算。`}
+  function updateMonthDays(now){
+    const label = `${now.getMonth()+1} 月预计上班 ${countDays(now,[...selected])} 天，按所选工作日自动计算。`;
+    if ($('monthDays').textContent !== label) $('monthDays').textContent = label;
+  }
   function parseTime(value){const match=/^(\d{2}):(\d{2})$/.exec(value);return match?Number(match[1])*60+Number(match[2]):NaN}
   function valid(value){return value&&Number.isFinite(value.salary)&&value.salary>0&&Array.isArray(value.weekdays)&&value.weekdays.length>0&&value.weekdays.every(day=>Number.isInteger(day)&&day>=0&&day<=6)&&Number.isFinite(parseTime(value.start))&&parseTime(value.end)>parseTime(value.start)}
   function readForm(){return {salary:Number($('salary').value),weekdays:[...selected],start:$('start').value,end:$('end').value}}
   function loadForm(value){$('salary').value=value.salary;$('start').value=value.start;$('end').value=value.end;selected=new Set(value.weekdays);drawDays()}
   function format(amount){return '¥'+amount.toLocaleString('zh-CN',{minimumFractionDigits:2,maximumFractionDigits:2})}
   function update(){
-    if(!config)return;
-    const now=new Date(),year=now.getFullYear(),month=now.getMonth(),today=now.getDate(),day=now.getDay();
+    const now = new Date();
+    if (results.hidden) {
+      updateMonthDays(now);
+      return;
+    }
+    const year=now.getFullYear(),month=now.getMonth(),today=now.getDate(),day=now.getDay();
     const scheduled=countDays(now,config.weekdays);let completed=0;
     for(let date=1;date<today;date++)if(config.weekdays.includes(new Date(year,month,date).getDay()))completed++;
-    updateMonthDays(now);
     const working=config.weekdays.includes(day),start=parseTime(config.start),end=parseTime(config.end),current=now.getHours()*60+now.getMinutes()+now.getSeconds()/60;
     const fraction=working?Math.max(0,Math.min(1,(current-start)/(end-start))):0;
     const daily=config.salary/scheduled,todayEarned=daily*fraction,monthEarned=daily*(completed+fraction);
@@ -66,12 +91,45 @@
     $('monthEarned').textContent=format(monthEarned);$('monthLeft').textContent=format(Math.max(0,config.salary-monthEarned));
     $('basis').textContent=`本月按所选工作日共有 ${scheduled} 天；日薪 ${format(daily)} = 月底薪 ÷ ${scheduled} 天。`;
   }
-  try{const saved=JSON.parse(localStorage.getItem('littlePaydayConfig'));if(valid(saved))config=saved}catch(error){}
-  if(!config)config={salary:10000,weekdays:[1,2,3,4,5],start:'09:00',end:'18:00'};
-  loadForm(config);update();setInterval(update,1000);
-  $('form').addEventListener('submit',event=>{event.preventDefault();const value=readForm();if(!valid(value)){$('error').textContent='请填写有效底薪、选择工作日，并确保下班晚于上班（暂不支持跨夜）。';return}$('error').textContent='';config=value;try{localStorage.setItem('littlePaydayConfig',JSON.stringify(config))}catch(error){}update();$('settings').classList.remove('open')});
-  const showSettings=()=>{if(matchMedia('(max-width:700px)').matches)$('settings').classList.add('open');$('salary').focus()};
-  $('openSettings').addEventListener('click',showSettings);$('edit').addEventListener('click',showSettings);$('refresh').addEventListener('click',update);
+  let saved;
+  try {
+    saved = JSON.parse(localStorage.getItem(storageKey));
+  } catch {
+    // Storage may be unavailable in an embedded browser.
+  }
+  if (valid(saved)) loadForm(saved);
+  else drawDays();
+
+  $('form').addEventListener('submit', event => {
+    event.preventDefault();
+    const value = readForm();
+    if (!valid(value)) {
+      error.hidden = false;
+      error.textContent = '请填写有效底薪、选择工作日，并确保下班时间晚于上班时间。';
+      return;
+    }
+    error.hidden = true;
+    error.textContent = '';
+    config = value;
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(config));
+    } catch {
+      // The current result still works without storage.
+    }
+    settings.hidden = true;
+    results.hidden = false;
+    update();
+    $('resultsTitle').focus();
+  });
+
+  $('edit').addEventListener('click', () => {
+    results.hidden = true;
+    settings.hidden = false;
+    updateMonthDays(new Date());
+    $('settingsTitle').focus();
+  });
+  $('refresh').addEventListener('click', update);
+  setInterval(update, 1000);
 })();
 </script>
 </body>
